@@ -3,14 +3,14 @@ import Header from '../Header';
 
 class Search extends Component {
   state = {
-    nome: '',
+    name: '',
     disabled: true,
   };
 
   validateButton = () => {
-    const { nome } = this.state;
+    const { name } = this.state;
     const magicNumber = 2;
-    const biggerThan = nome.length >= magicNumber;
+    const biggerThan = name.length >= magicNumber;
     if (biggerThan) {
       this.setState({ disabled: false });
     } else {
@@ -27,7 +27,7 @@ class Search extends Component {
   };
 
   render() {
-    const { nome, disabled } = this.state;
+    const { name, disabled } = this.state;
     return (
       <div data-testid="page-search">
         <Header />
@@ -38,7 +38,7 @@ class Search extends Component {
               type="text"
               name="nome"
               id="seachInput"
-              value={ nome }
+              value={ name }
               onChange={ this.onInputChange }
             />
           </label>
