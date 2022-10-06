@@ -4,14 +4,12 @@ import { createUser } from '../services/userAPI';
 import Loading from '../Loading';
 
 class Login extends Component {
-  constructor() {
-    super();
-    this.state = {
-      name: '',
-      disabled: true,
-      loading: false,
-    };
-  }
+  // lembrei de tirar o contructor e o super; dica do braddock
+  state = {
+    name: '',
+    disabled: true,
+    loading: false,
+  };
 
   validateInput = () => {
     const { name } = this.state;
