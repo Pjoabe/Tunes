@@ -36,7 +36,7 @@ class Search extends Component {
             <input
               data-testid="search-artist-input"
               type="text"
-              name="nome"
+              name="name"
               id="seachInput"
               value={ name }
               onChange={ this.onInputChange }
