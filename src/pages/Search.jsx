@@ -40,7 +40,8 @@ class Search extends Component {
     const { name } = this.state;
     const apiReq = await searchAlbumsAPI(name);
     this.setState(
-      () => ({ apiData: apiReq }),
+      () => ({ apiData: apiReq,
+        loading: false }),
       () => {
         this.validateApiResult();
       },
